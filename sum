@@ -1,0 +1,12 @@
+//STEP1    EXEC PGM=SORT                                 
+//SYSOUT   DD SYSOUT=*                                   
+//SORTIN   DD *                                          
+12345CARLOS DA SILVA12345                                
+23423ANA DA SILVA   12345                                
+56785PAULA SANTOS   12345                                
+12345CARLOS DA SILVA23456                                
+23423ANA DA SILVA   56262                                
+//SORTOUT  DD SYSOUT=*                                   
+//SYSIN    DD *                                          
+  SORT FIELDS=(1,5,CH,A)                                 
+  SUM FIELDS=(21,5,ZD)     
